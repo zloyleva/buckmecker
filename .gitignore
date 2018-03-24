@@ -1,0 +1,5 @@
+/.idea/
+*.log
+/public/
+mix-manifest.json
+node_modules/
