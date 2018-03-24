@@ -1,0 +1,124 @@
+.container.content.single_championship {
+  .row {
+    .center_content_list {
+      .single_post {
+        .prognoz_box{
+          border-bottom: 1px solid #dcdcdc;
+          border-top: 1px solid #dcdcdc;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          h3{
+            width: 260px;
+            margin: 0 auto;
+          }
+          form{
+            width: 160px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            .radio_form_group{
+              margin-top: 15px;
+              display: flex;
+              justify-content: space-between;
+              .yes_box, .no_box{
+                position: relative;
+                display: flex;
+                align-items: center;
+                input[type="radio"]{
+                  user-select: none;
+                  cursor: pointer;
+                  opacity: 0;
+                  width: 18px;
+                  height: 18px;
+                  margin: 0px;position: absolute;
+                  z-index: 100;
+                  &:checked ~ .marker:after {
+                    background-color: #336699;
+                    display: block;
+                  }
+                }
+                .marker{
+                  position: absolute;
+                  display: inline-block;
+                  width: 18px;
+                  height: 18px;
+                  border: 2px solid #336699;
+                  left: 0;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  &:after {
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+
+                  }
+                }
+                label{
+                  margin: 0 0 0 22px;
+                  cursor: pointer;
+                }
+              }
+            }
+            .send_prognoz_radio{
+              width: 100%;
+              background-color: #336699;
+              border: 1px solid #336699;
+              border-radius: 5px;
+              color: #fff;
+              font-size: 17px;
+              margin-top: 15px;
+              margin-bottom: 10px;
+              padding: 10px 15px;
+            }
+            a.show_more{
+              color: #3f3f3f;
+              text-decoration: underline;
+            }
+          }
+          .rate_result{
+            margin: 15px 10px;
+            .rate_result_yes, .rate_result_no{
+              margin-top: 10px;
+              display: flex;
+              .slider_text{
+                width: 220px;
+                color: #fff;
+                padding: 5px 0px 5px 10px;
+              }
+              .slider_line{
+                flex: 1;
+                .line{
+                  height: 100%;
+                  border-top-right-radius: 3px;
+                  border-bottom-right-radius: 3px;
+                }
+              }
+            }
+            .rate_result_yes{
+              .slider_text, .slider_line .line{
+                background-color: #004571;
+              }
+            }
+            .rate_result_no{
+              .slider_text, .slider_line .line{
+                background-color: #336699;
+              }
+            }
+            .rate_result_result{
+              text-align: center;
+              margin-top: 5px;
+            }
+          }
+        }
+        .post_rate{
+          margin: 15px 10px;
+          h3{
+            text-transform: uppercase;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

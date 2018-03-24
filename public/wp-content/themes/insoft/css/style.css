@@ -1,0 +1,125 @@
+.container-fluid.first_screen .row {
+  background-image: url("/wp-content/themes/insoft/images/bg-02.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container-fluid.first_screen .row img {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.container-fluid.first_screen .row h1 {
+  font-weight: bold;
+  margin-bottom: 35px;
+}
+
+.container.tv_solution,
+.container.video_solution,
+.container.mission,
+.container.ott_tv,
+.container.four_items,
+.container.mobile_screen,
+.container.contact_us {
+  margin-top: 55px;
+  margin-bottom: 55px;
+}
+
+.container.tv_solution .row,
+.container.video_solution .row,
+.container.mission .row,
+.container.ott_tv .row,
+.container.four_items .row,
+.container.mobile_screen .row,
+.container.contact_us .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+}
+
+.container.tv_solution .row .text_desc,
+.container.video_solution .row .text_desc,
+.container.mission .row .text_desc,
+.container.ott_tv .row .text_desc,
+.container.four_items .row .text_desc,
+.container.mobile_screen .row .text_desc,
+.container.contact_us .row .text_desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container.tv_solution .row .text_desc .blue,
+.container.video_solution .row .text_desc .blue,
+.container.mission .row .text_desc .blue,
+.container.ott_tv .row .text_desc .blue,
+.container.four_items .row .text_desc .blue,
+.container.mobile_screen .row .text_desc .blue,
+.container.contact_us .row .text_desc .blue {
+  color: #8195ff;
+  font-weight: bolder;
+}
+
+.container.tv_solution .row .text_desc h2,
+.container.video_solution .row .text_desc h2,
+.container.mission .row .text_desc h2,
+.container.ott_tv .row .text_desc h2,
+.container.four_items .row .text_desc h2,
+.container.mobile_screen .row .text_desc h2,
+.container.contact_us .row .text_desc h2 {
+  font-weight: bolder;
+  margin: 5px 0;
+}
+
+.container.tv_solution .row .text_desc p,
+.container.video_solution .row .text_desc p,
+.container.mission .row .text_desc p,
+.container.ott_tv .row .text_desc p,
+.container.four_items .row .text_desc p,
+.container.mobile_screen .row .text_desc p,
+.container.contact_us .row .text_desc p {
+  margin: 5px 0;
+}
+
+.container.tv_solution .row .img img,
+.container.video_solution .row .img img,
+.container.mission .row .img img,
+.container.ott_tv .row .img img,
+.container.four_items .row .img img,
+.container.mobile_screen .row .img img,
+.container.contact_us .row .img img {
+  width: 100%;
+}
+
+.container-fluid.video_solution,
+.container-fluid.ott_tv {
+  background-color: #8dc0b7;
+  color: #fff;
+}
+
+.container-fluid.ott_tv {
+  background-image: url("/wp-content/themes/insoft/images/bg-03.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container-fluid.mobile_screen {
+  background-color: #303030;
+  color: #fff;
+  overflow: hidden;
+}
+

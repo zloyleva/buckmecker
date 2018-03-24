@@ -1,0 +1,100 @@
+.container.content{
+  .row{
+    margin-top: 64px;
+    .left_sidebar{
+      .left_sidebar_top{
+        ul.menu_tab{
+          display: flex;
+          align-items: flex-end;
+          border-bottom: 1px solid #004571;
+          @include clean_list;
+          li{
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+            overflow: hidden;
+            text-transform: uppercase;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 42px;
+            background-color: #d6d9eb;
+            cursor: pointer;
+            text-decoration: underline;
+            color: #aeb3d5;
+            &.active{
+              background-color: #fff;
+              height: 50px;
+              color: #004571;
+              text-decoration: none;
+            }
+          }
+        }
+        ul.rubriky{
+          display: flex;
+          flex-direction: column;
+          @include clean_list;
+          border-bottom-right-radius: 7px;
+          border-bottom-left-radius: 7px;
+          overflow: hidden;
+          li{
+            background-color: #fff;
+            &:last-child{
+              border-bottom: unset;
+            }
+            &:hover{
+              a span.triangle{
+                background-image: url("/wp-content/themes/football/images/triangle-hover.png");
+              }
+            }
+            a{
+              display: flex;
+              justify-content: space-between;
+              padding: 15px;
+              text-decoration: none;
+              border-left: 5px solid transparent;
+              border-bottom: 1px solid #d9d9d9;
+              &:hover{
+                border-left: 5px solid #d32f2f;
+              }
+              &.opens_menu{
+                background-color: #de0006;
+                color: #fff;
+                span.triangle{
+                  background-image: url("/wp-content/themes/football/images/triangle-red.png");
+                }
+              }
+              span.link-text{
+                border-bottom: 1px solid #f0a1a1;
+                font-weight: bold;
+              }
+              span.triangle{
+                width: 20px;
+                height: 20px;
+                display: block;
+                background-position: center;
+                background-image: url("/wp-content/themes/football/images/triangle.png");
+              }
+            }
+            ul.sub_menu{
+              @include clean_list;
+              display: none;
+              li{
+                a{
+                  border: unset;
+                  background-color: #f1f1f1;
+                  border-bottom: 1px solid #fff;
+                  font-weight: bold;
+                  color: #336699;
+                  &:hover{
+                    background-color: #dedede;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

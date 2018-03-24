@@ -1,0 +1,28 @@
+.pagination{
+  ul.page-numbers{
+    @include clean_list;
+    display: flex;
+    li{
+      width: 40px;
+      height: 40px;
+      background-color: #fff;
+      margin: 2px;
+      display: flex;
+      a, span{
+        text-decoration: none;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        &.current{
+          background-color: #0A246A;
+          color: #fff;
+        }
+      }
+      span{
+
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+.container.content.single_championship{
+  .row{
+    .center_content_list{
+      .single_post{
+        background-color: #fff;
+        border-radius: 5px;
+        overflow: hidden;
+        ol.breadcrumb{
+          border-bottom: 1px solid #d9d9d9;
+          background-color: #fff;
+          border-radius: unset;
+          li + li:before{
+            content: ">";
+          }
+        }
+        .article_meta{
+          margin: 15px 10px;
+          overflow: hidden;
+          border-bottom-left-radius: 5px;
+          border-top-left-radius: 5px;
+          display: flex;
+          @media (max-width: 768px){
+            border-radius: unset;
+            .article_thumbnail{
+              display: none;
+            }
+          }
+
+          .article_meta{
+            margin: unset;
+            flex: 1;
+            border-top: 1px solid #d9d9d9;
+            border-right: 1px solid #d9d9d9;
+            border-bottom: 1px solid #d9d9d9;
+            border-radius: unset;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            @media (max-width: 768px){
+              border-bottom-left-radius: 5px;
+              border-top-left-radius: 5px;
+              border-left: 1px solid #d9d9d9;
+            }
+            .fist_column,.second_column{
+              display: flex;
+              flex-direction: column;
+              width: 50%;
+              .first_row{
+                display: flex;
+              }
+              .second_row{
+                display: flex;
+              }
+              .first_row, .second_row{
+                flex: 1;
+                .item_image{
+                  background-color: #e8eaf6;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  padding: 8px;
+                  img{
+                    width: 22px;
+                    height: auto;
+                  }
+                }
+                .item_text{
+                  color: #336699;
+                  font-weight: bold;
+                  display: flex;
+                  align-items: center;
+                  font-size: 12px;
+                  padding-left: 5px;
+                }
+              }
+            }
+            .fist_column{
+              .first_row{}
+              .second_row{
+                border-top: 1px solid #d9d9d9;
+              }
+            }
+            .second_column{
+              .first_row{}
+              .second_row{
+                border-top: 1px solid #d9d9d9;
+              }
+            }
+          }
+        }
+        .post_content{
+          margin: 15px 10px 40px;
+          .championships_stavka{
+            background-color: #336699;
+            color: #fff;
+            margin: 0 18px;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

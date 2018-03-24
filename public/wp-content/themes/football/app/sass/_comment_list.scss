@@ -1,0 +1,56 @@
+.container.content.single_championship {
+  .row {
+    .center_content_list {
+      .single_post {
+        .comment_list {
+
+          h3.header_comment_list{
+            text-transform: uppercase;
+            margin: 15px 10px;
+          }
+          .comment_item{
+            &.odd{
+              background-color: #f1f1f1;
+              border-top: 1px solid #f1f1f1;
+              border-bottom: 1px solid #f1f1f1;
+            }
+            .content_box{
+              margin: 12px 10px;
+              display: flex;
+              align-items: center;
+              .blue_sq{
+                background-color: #336699;
+                width: 35px;
+                height: 35px;
+                border-radius: 5px;
+                margin-right: 10px;
+              }
+              .comment_meta{
+                .comment_author{
+                  color: #004571;
+                }
+                .comment_date{
+                  font-size: 11px;
+                  color: #bbbbbb;
+                  font-style: italic;
+                }
+              }
+            }
+            .comment_content{
+              display: flex;
+              margin: 12px 10px;
+              .img{
+                width: 35px;
+                height: 35px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

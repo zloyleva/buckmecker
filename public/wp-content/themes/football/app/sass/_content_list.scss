@@ -1,0 +1,158 @@
+.center_content_list{
+  h1{
+    margin: 0;
+    color: #002e4b;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .article{
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 22px;
+    color: #333333;
+    text-decoration: none;
+    &:hover{
+      .article_thumbnail{
+        img{transform: scale(1.15);}
+      }
+    }
+    .article_thumbnail{
+      @media (max-width: 768px){
+        display: none;
+      }
+      overflow: hidden;
+      max-width: 220px;
+      max-height: 130px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &.matches{
+        max-height: 220px;
+      }
+      img{
+        height: 100%;
+        transition: all .2s ease-in-out;
+      }
+    }
+    .article_content{
+      flex: 1;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      .top_content{
+        flex: 1;
+        border-bottom: 1px solid #d9d9d9;
+        .article_title{
+          padding: 5px 10px;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 15px;
+
+        //  Part for Matches
+          &.match{
+            background-color: #336699;
+            color: #fff;
+            .title_text{}
+            .date_text{
+              font-size: 11px;
+            }
+          }
+        //  ****************
+        }
+        .article_desc{
+          padding: 5px 10px;
+          font-size: 10px;
+          text-overflow: clip;
+
+        //  Part for Matches
+          .meta_data{
+            border: 2px solid #e1e1e1;
+            border-radius: 5px;
+            overflow: hidden;
+            table{
+              border-collapse: collapse;
+              border-style: hidden; /* hide standard table (collapsed) border */
+              width: 100%;
+              tr{
+                &:nth-child(1){
+                  border-bottom: 2px solid #e1e1e1;
+                  td:nth-child(2){
+                    border-right: 2px solid #e1e1e1;
+                  }
+                }
+                &:nth-child(2){
+                  td:nth-child(2){
+                    border-right: 2px solid #e1e1e1;
+                  }
+                }
+                td{
+                  //border: 2px solid #e1e1e1;
+                  &.item_image{
+                    text-align: center;
+                    width: 10%;
+                    background-color: #e8eaf6;
+                    img{
+                      width: 20px;
+                      margin: 5px auto;
+                    }
+                  }
+                  &.item_text{
+                    width: 40%;
+                    color: #336699;
+                    font-weight: bold;
+                    font-size: 14px;
+                    padding-left: 20px;
+                  }
+                }
+              }
+            }
+          }
+          .get_more{
+            background-color: #e8eaf6;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            padding: 8px;
+            margin-top: 7px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+          }
+        //  ****************
+        }
+      }
+      .bottom_content{
+        padding: 2px 10px;
+        display: flex;
+        justify-content: flex-end;
+
+      //  Part for Matches
+        .count_render{
+          font-size: 10px;
+          flex: 1;
+          display: flex;
+          align-items: center;
+          .green{
+            color: green;
+          }
+          .red{
+            color: red;
+          }
+        }
+      //  ****************
+        .views img, .comments img{
+          width: 16px;
+        }
+        .views .count, .comments .count{
+          font-size: 10px;
+          margin-left: 2px;
+        }
+        .comments{
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}

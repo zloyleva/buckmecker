@@ -1,0 +1,108 @@
+footer{
+  background-color: #002e4b;
+  .container-fluid{
+    .row{
+      .container{
+        .row{
+          padding-top: 25px;
+          .description{
+            .logo{
+              float: left;
+              max-width: 50%;
+              padding-right: 16px;
+              padding-bottom: 20px;
+              border-right: 2px solid #336699;
+              margin-right: 16px;
+              @media (max-width: 768px){
+                max-width: 100%;
+                float: unset;
+                padding-right: unset;
+                padding-bottom: unset;
+                margin-right: unset;
+                border: unset;
+              }
+              min-width: 290px;
+              a.logo_link{
+                display: flex;
+                justify-content: center;
+                img{
+                  max-width: 100%;
+                }
+              }
+              .in_social{
+                text-transform: uppercase;
+                color: #336699;
+                text-align: center;
+                margin: 20px auto;
+              }
+              .social_link{
+                display: flex;
+                justify-content: space-between;
+                a{
+                  max-width: 12%;
+                  display: block;
+                  img{
+                    max-width: 100%;
+                  }
+                }
+              }
+            }
+            .about_us{
+              h3,p{
+                color: #fff;
+              }
+            }
+          }
+          .contact_form{
+            h3{
+              text-transform: uppercase;
+              color: #fff;
+              text-align: right;
+            }
+            .form-group {
+              margin-bottom: unset;
+            }
+            input,textarea{
+              margin-top: 10px;
+              margin-bottom: unset;
+              background-color: #265483;
+              border: unset;
+              color: #fff;
+              border-radius: unset;
+              &::placeholder{
+                color: #5e90c2;
+              }
+            }
+            input[name="name"]{
+              border-top-left-radius: 5px;
+              border-top-right-radius: 5px;
+            }
+            textarea{
+              height: 106px;
+              resize: none;
+              border-radius: unset;
+              border-bottom-left-radius: 5px;
+              border-bottom-right-radius: 5px;
+            }
+            .buttons_section{
+              margin-top: 10px;
+              .g-recaptcha{
+                transform-origin: left top;
+              }
+              button.send_msg{
+                background-color: #336699;
+                color: #fff;
+                padding: 14px 0;
+                text-transform: uppercase;
+                width: 100%;
+                &:hover{
+                  background-color: #265483;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

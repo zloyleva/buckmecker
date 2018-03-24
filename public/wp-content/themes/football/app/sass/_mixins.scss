@@ -1,0 +1,27 @@
+@mixin clean_list{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin sidebar_header{
+  .sidebar_menu_head {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #fff;
+    border-bottom: 1px solid #004571;
+    display: flex;
+    align-items: center;
+    .red_div {
+      height: 2px;
+      background-color: #d32f2f;
+      flex-grow: 1;
+    }
+    .text_section {
+      color: #004571;
+      text-transform: uppercase;
+      margin: 20px 5px;
+      font-size: 18px;
+    }
+  }
+}

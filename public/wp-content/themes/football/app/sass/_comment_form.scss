@@ -1,0 +1,53 @@
+.container.content.single_championship {
+  .row {
+    .center_content_list {
+      .single_post{
+        .comment_form{
+          margin: 15px 10px 35px 10px;
+          .comment-respond{
+            h3{
+              text-transform: uppercase;
+            }
+            form{
+              & p:nth-last-child(-n+2) input, & p:nth-last-child(-n+2) textarea{
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+              }
+              p{
+                textarea, input{
+                  width: 100%;
+                  resize: none;
+                  background-color: #f1f1f1;
+                  border: none;
+                  overflow: auto;
+                  outline: none;
+
+                  padding: 10px;
+                  &::placeholder{
+                    color: #002e4b;
+                    font-size: 14px;
+                  }
+                }
+                textarea{
+                  border-top-left-radius: 5px;
+                  border-top-right-radius: 5px;
+                  height: 100px;
+                }
+              }
+              div.form-submit{
+                input[type="submit"]{
+                  background-color: #336699;
+                  border: 1px solid #336699;
+                  color: #fff;
+                  text-transform: uppercase;
+                  padding: 16px 26px;
+                  border-radius: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

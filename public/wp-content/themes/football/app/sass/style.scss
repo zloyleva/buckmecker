@@ -1,0 +1,33 @@
+@import 'variables';
+@import 'mixins';
+@import 'header';
+
+@import 'left_sidebar_top';
+@import 'left_sidebar_bottom';
+@import 'content_list';
+
+@import 'right_sidebar_top';
+
+@import 'footer';
+@import 'pagination';
+@import 'content_championship';
+@import 'prognoz_box';
+@import 'comment_list';
+@import 'comment_form';
+
+body{
+  background-color: #e8eaf6;
+  .container{
+    @media (min-width: 768px){
+      width: 762px;
+    }
+    @media (min-width: 992px){
+      width: 990px;
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+    @media (min-width: 1200px){
+      width: 1190px;
+    }
+  }
+}
