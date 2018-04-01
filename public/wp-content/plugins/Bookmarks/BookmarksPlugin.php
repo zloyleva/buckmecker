@@ -23,11 +23,18 @@ class BookmarksPlugin{
         add_action('init', [$this, 'do_bookmark_verb']);
     }
 
+    /**
+     * Here we create bookmark or unbookmark
+     */
     function do_bookmark_verb(){
         $bookmark = Bookmark::getInstance();
         $bookmark->bookmarkAction($_POST);
     }
 
+    /**
+     * Add bookmark button to post
+     * @param $post
+     */
     function add_bookmark_buttons(& $post){
         $bookmark = Bookmark::getInstance();
         $current_user_id = get_current_user_id();
@@ -54,6 +61,9 @@ class BookmarksPlugin{
         $post->post_title = "<div class=\"card__title\">" . $post->post_title . "</div>". $html;
     }
 
+    /**
+     * Show error msg on admin page
+     */
     function no_file_notice(){
         echo   "<div class='error notice'>
                     <p>We can't create {$this->bookmarksListPageName} file. Do it self!</p>
