@@ -44,9 +44,6 @@ class BookmarkTheme{
         wp_enqueue_style( 'main-css', get_stylesheet_uri() );
         wp_enqueue_style( 'football_theme_styles', get_template_directory_uri() . '/css/style.css' );
         wp_enqueue_script( 'jquery', true );
-
-        wp_register_script( 'football_theme_script',  get_template_directory_uri() . '/script/script.js', array('jquery'), '1.0.0', true );
-        wp_enqueue_script( 'football_theme_script' );
     }
 
 }

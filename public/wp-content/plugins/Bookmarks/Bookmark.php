@@ -1,6 +1,19 @@
 <?php
 class Bookmark{
 
+    private static $bookmarkInstance = null;
+
+    function __construct()
+    {
+    }
+
+    static function getInstance(){
+        if(self::$bookmarkInstance === null){
+            self::$bookmarkInstance = new self();
+        }
+        return self::$bookmarkInstance;
+    }
+
     /**
      * @param $post_id
      * @param $user_id
