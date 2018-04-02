@@ -76,11 +76,20 @@ class Championship{
         }
 
         add_action( 'save_post', array( $this, 'championships_save_postdata' ));
+        add_action( 'save_post', array( $this, 'set_open_comment_for_championships'), 10, 3 );
 
         add_filter( 'post_type_link', array( $this, 'championships_permalink' ), 10, 2 );
         add_filter( 'paginate_links', array( $this, 'add_first_page_link' ), 10, 1 );
+    }
 
 
+    function set_open_comment_for_championships( $post_id, $post, $update ) {
+        //if insert new post
+        if(!$update && $post->post_type == 'championships'){
+            remove_action( 'save_post', 'set_open_comment_for_championships' );
+            wp_update_post( array( 'ID' => $post_id, 'comment_status' => 'open' ) );
+            add_action( 'save_post', 'set_open_comment_for_championships' );
+        }
     }
 
     function __call($func, $params){

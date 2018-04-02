@@ -3,16 +3,21 @@ console.log('App was loaded');
 
 require('jquery-editable-select');
 require('jquery-ui');
+require('jquery-validation');
 
 import {HeaderModule} from './header/header';
 import {LeftSidebarModule} from './content/left_sidebar';
 import {RightSidebarModule} from './content/right_sidebar';
+import {WhoIsYourBk} from './content/who_is_your_bk';
+import {RateYourBk} from './content/rate_your_bk';
 
 $(document).ready(() => {
     console.log('Start...');
     new HeaderModule();
     new LeftSidebarModule();
     new RightSidebarModule();
+    new WhoIsYourBk();
+    new RateYourBk();
 
     function scaleCaptcha(elementWidth) {
         // Width of the reCAPTCHA element, in pixels

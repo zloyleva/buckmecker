@@ -4,12 +4,23 @@ export class RightSidebarModule {
 
         this.init();
         this.clickOpenBKListHandler();
+        this.changeRangeHandler();
     }
 
     init(){
-        $('#select_bk').editableSelect({ filter: false });
-        // $('#bk_rate').slider();
+        $('#select_bk').editableSelect({ filter: false })
+            .on('select.editable-select', function (e, el) {
+                // el is the selected item "option"
+                $('#rate_bk_id').val(el.data('value'));
+            });
+    }
 
+    changeRangeHandler(){
+        $('#bk_rate').change(e=>{
+            const $range = $(e.target);
+            $('.range_value').html($range.val());
+            $('.range_value').css('left',`${$range.val()}%`);
+        });
     }
 
     clickOpenBKListHandler(){

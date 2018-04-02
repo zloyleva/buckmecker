@@ -14,8 +14,10 @@ const toPath = './public/wp-content/themes/football';
  |
  */
 
-mix.js(fromPath + '/js/app.js', toPath + '/script/script.js')
+mix
+    .js(fromPath + '/js/app.js', toPath + '/script/script.js')
    .sass(fromPath + '/sass/style.scss', toPath + '/css/style.css');
+   // .less(fromPath + '/styles/style.less', toPath + '/css/style.css');
 
 // mix.copy('./materials/LearnTheme/*.php','./public/wp-content/themes/LearnTheme/');
 

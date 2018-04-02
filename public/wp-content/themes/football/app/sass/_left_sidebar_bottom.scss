@@ -23,7 +23,12 @@
               &:focus{
                 outline: none;
               }
-          }
+            }
+            label.error{
+              color: red;
+              position: absolute;
+              margin-top: 28px;
+            }
             button.send_bk{
               margin-left: 2px;
               padding-left: 4px;

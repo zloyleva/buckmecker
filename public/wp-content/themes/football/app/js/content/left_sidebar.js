@@ -8,7 +8,11 @@ export class LeftSidebarModule {
     }
 
     init(){
-        $('#who_is_your_bk').editableSelect({ filter: false });
+        $('#who_is_your_bk').editableSelect({ filter: false })
+            .on('select.editable-select', function (e, el) {
+            // el is the selected item "option"
+            $('#bk_id').val(el.data('value'));
+        });
     }
 
     clickOpenMenuHandler(){
@@ -43,12 +47,12 @@ export class LeftSidebarModule {
     }
 
     show_bk_list(element){
-        $('li.hide_item').show('slow');
+        $('ul.bk_list.left li.hide_item').show('slow');
         element.text('-');
     }
 
     hide_bk_list(element){
-        $('li.hide_item').hide('slow');
+        $('ul.bk_list.left li.hide_item').hide('slow');
         element.text('+');
     }
 }

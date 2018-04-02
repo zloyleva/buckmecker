@@ -466,6 +466,12 @@
   outline: none;
 }
 
+.container.content .row .left_sidebar .left_sidebar_bottom .sidebar_content .select_bk_container label.error {
+  color: red;
+  position: absolute;
+  margin-top: 28px;
+}
+
 .container.content .row .left_sidebar .left_sidebar_bottom .sidebar_content .select_bk_container button.send_bk {
   margin-left: 2px;
   padding-left: 4px;
@@ -1056,6 +1062,8 @@
 
 .container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content {
   background-color: #fff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content .head_text {
@@ -1063,14 +1071,14 @@
   font-size: 12px;
 }
 
-.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk {
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .inputs_container {
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 10px;
 }
 
-.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk input,
-.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk textarea {
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .inputs_container input,
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .inputs_container textarea {
   width: 100%;
   color: #d9d9d9;
   font-size: 12px;
@@ -1080,47 +1088,122 @@
   border: 1px solid #d9d9d9;
 }
 
-.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk input::-webkit-input-placeholder,
-.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk textarea::-webkit-input-placeholder {
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .inputs_container input::-webkit-input-placeholder,
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .inputs_container textarea::-webkit-input-placeholder {
   color: #d9d9d9;
 }
 
-.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk input:-ms-input-placeholder,
-.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk textarea:-ms-input-placeholder {
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .inputs_container input:-ms-input-placeholder,
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .inputs_container textarea:-ms-input-placeholder {
   color: #d9d9d9;
 }
 
-.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk input::-ms-input-placeholder,
-.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk textarea::-ms-input-placeholder {
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .inputs_container input::-ms-input-placeholder,
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .inputs_container textarea::-ms-input-placeholder {
   color: #d9d9d9;
 }
 
-.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk input::placeholder,
-.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk textarea::placeholder {
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .inputs_container input::placeholder,
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .inputs_container textarea::placeholder {
   color: #d9d9d9;
 }
 
-.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk input[name="name"],
-.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk textarea[name="name"] {
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .inputs_container input[name="name"],
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .inputs_container textarea[name="name"] {
   margin-bottom: 5px;
   margin-top: 5px;
 }
 
-.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk input[name="email"],
-.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk textarea[name="email"] {
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .inputs_container input[name="email"],
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .inputs_container textarea[name="email"] {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
-.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk #select_bk {
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .inputs_container #select_bk {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   background: url(/wp-content/themes/football/images/triangle_down.png) 97% center no-repeat;
 }
 
-.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk textarea#your_comment {
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .inputs_container .output_range {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: 20px;
+  margin-right: 17px;
+}
+
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .inputs_container .output_range .range_value {
+  position: absolute;
+}
+
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .inputs_container input[type="range"]#bk_rate {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  border: unset;
+  padding: unset;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #eee;
+  outline: none;
+}
+
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .inputs_container #bk_rate::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #004571;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .inputs_container #bk_rate::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #004571;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .inputs_container textarea#your_comment {
   height: 84px;
   margin-top: 5px;
+  resize: none;
+}
+
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .submit_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 16px;
+  border-top: 1px solid #d9d9d9;
+}
+
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .submit_container .rate_bk_button {
+  background-color: #336699;
+  color: #fff;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.container.content .row .right_sidebar .right_sidebar_second .right_sidebar_content form#rate_your_bk .submit_container .rate_bk_button:hover {
+  background-color: #004571;
 }
 
 footer {

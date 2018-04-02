@@ -15,7 +15,7 @@
 
                 $html = '';
                 $item_counts = 0;
-                foreach(Bukmeker::getBuckmekersOrderByRate() as $post){
+                foreach(BukmekerModel::getBuckmekersOrderByRate() as $post){
                     $item_counts++;
                     $add_class = '';
                     if($item_counts>4){
@@ -85,22 +85,32 @@
                 Пожалуйста, дайте свою оценку:
             </div>
             <form id="rate_your_bk" action="">
-                <select name="selct_bk" id="select_bk">
-                    <option selected disabled>Выберите букмекера</option>
-                    <?php
+                <div class="inputs_container">
+                    <input id="rate_bk_id" type="hidden" name="rate_bk_id" value="">
+                    <input id="rate_bk_action" type="hidden" name="action" value="action_rate_your_bk">
+                    <select name="selct_bk" id="select_bk">
+                        <option selected disabled>Выберите букмекера</option>
+                        <?php
                         $html = '';
-                        foreach(Bukmeker::getBuckmekers() as $post){
-                            $html .= '<option value="'.$post['ID'].'">'.$post['post_title'].'</option>';
+                        foreach(BukmekerModel::getBuckmekers() as $post){
+                            $html .= '<option data-value="'.$post['ID'].'">'.$post['post_title'].'</option>';
                         }
                         echo $html;
-                    ?>
-                </select>
-                <input name="name" type="text" placeholder="Ваше имя">
-                <input name="email" type="email" placeholder="Ваш e-mail">
+                        ?>
+                    </select>
+                    <input name="name" type="text" placeholder="Ваше имя">
+                    <input name="email" type="email" placeholder="Ваш e-mail">
 
-                <input name="rate" id="bk_rate" type="number">
+                    <div class="output_range">
+                        <div class="range_value" style="left: 0">0</div>
+                    </div>
+                    <input name="rate" id="bk_rate" value="0" type="range" min="0" max="100" step="1">
 
-                <textarea name="your_comment" id="your_comment" placeholder="Ваш отзыв"></textarea>
+                    <textarea name="your_comment" id="your_comment" placeholder="Ваш отзыв"></textarea>
+                </div>
+                <div class="submit_container">
+                    <button type="button" class="btn rate_bk_button" id="rate_bk_button">Оценить</button>
+                </div>
             </form>
         </div>
     </div>

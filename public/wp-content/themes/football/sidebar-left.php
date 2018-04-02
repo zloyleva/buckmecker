@@ -26,30 +26,32 @@
             <div class="red_div"></div>
         </div>
         <div class="sidebar_content">
-            <form action="" class="select_bk_container">
-                <select name="" id="who_is_your_bk">
+            <form id="who_is_your_bk_form" action="" class="select_bk_container">
+                <input id="bk_id" type="hidden" name="bk_id" value="">
+                <input id="bk_action" type="hidden" name="action" value="action">
+                <select name="who_is_your_bk" id="who_is_your_bk">
                     <option selected disabled>Выберите букмекера</option>
                     <?php
                     $html = '';
-                    foreach(Bukmeker::getBuckmekers() as $post){
-                        $html .= '<option value="'.$post['ID'].'">'.$post['post_title'].'</option>';
+                    foreach(BukmekerModel::getBuckmekers() as $post){
+                        $html .= '<option data-value="'.$post['ID'].'">'.$post['post_title'].'</option>';
                     }
                     echo $html;
                     ?>
                 </select>
-                <button type="button" class="send_bk btn">OK</button>
+                <button id="who_is_your_bk_button" type="button" class="send_bk btn">OK</button>
             </form>
             <div class="bk_graph">
                 <div class="lines">
                     <div class="red_hr_lines"></div>
                 </div>
-                <div class="graph_containers">
+                <div class="graph_containers left">
                     <?php
                     $html = '';
-                    $total_subscriptions = Bukmeker::getBukmekersCountOfSubscriptions();
-                    $total_bukmekers = Bukmeker::getBukmekersCount();
+                    $total_subscriptions = BukmekerModel::getBukmekersCountOfSubscriptions();
+                    $total_bukmekers = BukmekerModel::getBukmekersCount();
                     $i = 0;
-                    foreach(Bukmeker::getBuckmekersOrderByUserCount() as $post){
+                    foreach(BukmekerModel::getBuckmekersOrderByUserCount() as $post){
                         $i++;
                         $html .= "<div class='p{$i} column_item' style='height: calc((100px*{$post['bukmekers_users_count']})/{$total_subscriptions}); width: calc(60%/{$total_bukmekers})'></div>";
                     }
@@ -62,15 +64,16 @@
         </div>
         <div class="sidebar_content_bottom">
             <div class="bk_list_container">
-                <ul class="bk_list">
+                <ul class="bk_list left">
                     <?php
                     $html = '';
                     $i = 0;
 
-                    foreach(Bukmeker::getBuckmekersOrderByUserCount() as $post){
+                    foreach(BukmekerModel::getBuckmekersOrderByUserCount() as $post){
                         $i++;
                         $percents = ($post['bukmekers_users_count']>0)?round(100*$post['bukmekers_users_count']/$total_subscriptions, 1):0;
-                        $html .= "<li><a href='{$post['guid']}'>";
+                        $class = ($i > 9)?"hide_item":'';
+                        $html .= "<li class='{$class}'><a href='{$post['guid']}'>";
                         $html .= "  <div class='color_sq p{$i}'></div>";
                         $html .= "  <div class='bk_text'>{$post['post_name']}</div>";
                         $html .= "  <div class='percents'>". $percents ."%</div>";
@@ -86,7 +89,7 @@
                 <div class="grey_div"></div>
             </div>
             <div class="bk_total">
-                Всего проголосовало <span class="numbers"><?= $total_subscriptions; ?></span>
+                Всего проголосовало <span class="numbers left"><?= $total_subscriptions; ?></span>
             </div>
         </div>
     </div>
