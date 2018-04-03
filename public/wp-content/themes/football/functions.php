@@ -1,5 +1,6 @@
 <?php
 
+require_once 'PostSettings/PostSettings.php';
 require_once 'Bukmeker.php';
 require_once 'Championship.php';
 require_once 'Left_sidebar_menu.php';
@@ -11,8 +12,8 @@ require_once 'Post_type/ChamppionshipPostType.php';
 require_once 'Taxonomy/Taxonomy.php';
 require_once 'Taxonomy/ChampionshipsTaxonomy.php';
 
-new Bukmeker();
-new Championship();
+$bukmeker = new Bukmeker();
+$championship = new Championship();
 new BukmekerPostType();
 new ChamppionshipPostType();
 new ChampionshipsTaxonomy();

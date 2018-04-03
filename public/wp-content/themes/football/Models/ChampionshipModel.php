@@ -8,23 +8,22 @@ class ChampionshipModel{
     protected $sql_join_list = '';
     protected $sql_select_list = '';
 
-    protected $meta_fields = [
-        'championships_play_time','championships_prognoz_time','championships_koef','championships_tour',
-        'championships_prognoz_for_date', 'championships_stavka', 'championships_prognoz_yes', 'championships_prognoz_no',
-        'championships_prognoz_ocenka','championships_prognoz_views'
-    ];
-
     function __construct()
     {
-        global $wpdb;
-
         $this->total_posts_number = $this->getPostsTotalCount();
+
+        $this->setSqlQueryString(new Championship());
+    }
+
+    protected function setSqlQueryString(Championship $championship){
+        global $wpdb;
+        $meta_fields = $championship->getPostMetaArray();
 
         //Create query fields for SQL query
         $i = 1;
-        foreach ($this->meta_fields as $field){
-            $this->sql_select_list .= ", meta{$i}.meta_value as {$field}";
-            $this->sql_join_list .= "left join {$wpdb->postmeta} as meta{$i} on {$wpdb->posts}.id = meta{$i}.post_id and meta{$i}.meta_key = '{$field}'";
+        foreach ($meta_fields as $field){
+            $this->sql_select_list .= ", meta{$i}.meta_value as {$field['name']}";
+            $this->sql_join_list .= "left join {$wpdb->postmeta} as meta{$i} on {$wpdb->posts}.id = meta{$i}.post_id and meta{$i}.meta_key = '{$field['name']}'";
             $i++;
         }
     }
