@@ -3,7 +3,7 @@
 /**
  * Class Bucmeker
  */
-class Bukmeker extends PostSettings
+class Bukmeker extends PostMeta
 {
     protected $meta_fields = [
         [

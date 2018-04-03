@@ -1,6 +1,6 @@
 <?php
 
-require_once 'PostSettings/PostSettings.php';
+require_once 'PostMeta/PostMeta.php';
 require_once 'Bukmeker.php';
 require_once 'Championship.php';
 require_once 'Left_sidebar_menu.php';

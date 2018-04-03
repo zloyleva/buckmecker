@@ -1,5 +1,5 @@
 <?php
-class Championship extends PostSettings {
+class Championship extends PostMeta {
 
     protected $meta_fields = [
         [

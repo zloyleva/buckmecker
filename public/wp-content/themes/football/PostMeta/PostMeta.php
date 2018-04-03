@@ -1,6 +1,6 @@
 <?php
 
-abstract class PostSettings{
+abstract class PostMeta{
     protected $meta_fields = [];
     protected $post_type = '';
 
