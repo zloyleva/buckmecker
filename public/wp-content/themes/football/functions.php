@@ -7,10 +7,15 @@ require_once 'Models/ChampionshipModel.php';
 require_once 'Models/BukmekerModel.php';
 require_once 'Post_type/PostType.php';
 require_once 'Post_type/BukmekerPostType.php';
+require_once 'Post_type/ChamppionshipPostType.php';
+require_once 'Taxonomy/Taxonomy.php';
+require_once 'Taxonomy/ChampionshipsTaxonomy.php';
 
 new Bukmeker();
 new Championship();
 new BukmekerPostType();
+new ChamppionshipPostType();
+new ChampionshipsTaxonomy();
 
 
 add_action('after_setup_theme', 'football_theme_setup');
