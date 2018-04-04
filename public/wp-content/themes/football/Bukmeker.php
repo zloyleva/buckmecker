@@ -14,6 +14,13 @@ class Bukmeker extends PostMeta
             'label'=>'Рейтинг букмекера: ',
         ],
         [
+            'name'=>'bukmekers_rate_users_count',
+            'title'=>'Рейтинг букмекера, количество голосов',
+            'type'=>'number',
+            'step'=>'1',
+            'label'=>'Рейтинг букмекера, количество голосов: ',
+        ],
+        [
             'name'=>'bukmekers_review_url',
             'title'=>'Ссылка на сайт букмекера',
             'label'=>'Ссылка на сайт букмекера: ',
