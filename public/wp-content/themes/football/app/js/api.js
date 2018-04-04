@@ -39,4 +39,14 @@ export class ApiModule {
             retries: 1
         };
     };
+
+    apiHeaders() {
+        return {
+            // 'authorization': 'Bearer ' + this.apiToken,
+            'accept': 'application/json',
+            'content-type': 'application/x-www-form-urlencoded',
+            'cache-control': 'no-cache',
+            // 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+        };
+    };
 }
