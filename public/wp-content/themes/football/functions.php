@@ -87,11 +87,12 @@ function my_action_callback()
     }
 
     if ($result) {
-        BukmekerModel::getBuckmekersFromDB();
+        $bukmeker = new BukmekerModel();
+        $bukmeker->getBuckmekersFromDB();
         $data = [
-            'total_subscriptions' => BukmekerModel::getBukmekersCountOfSubscriptions(),
-            'total_bukmekers' => BukmekerModel::getBukmekersCount(),
-            'bukmekers_list' => BukmekerModel::getBuckmekersOrderByUserCount(),
+            'total_subscriptions' => $bukmeker->getBukmekersCountOfSubscriptions(),
+            'total_bukmekers' => $bukmeker->getBukmekersCount(),
+            'bukmekers_list' => $bukmeker->getBuckmekersOrderByUserCount(),
         ];
     }
 

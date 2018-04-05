@@ -33,7 +33,7 @@
                     <option selected disabled>Выберите букмекера</option>
                     <?php
                     $html = '';
-                    foreach(BukmekerModel::getBuckmekers() as $post){
+                    foreach($bukmeker->getBuckmekers() as $post){
                         $html .= '<option data-value="'.$post['ID'].'">'.$post['post_title'].'</option>';
                     }
                     echo $html;
@@ -48,10 +48,10 @@
                 <div class="graph_containers left">
                     <?php
                     $html = '';
-                    $total_subscriptions = BukmekerModel::getBukmekersCountOfSubscriptions();
-                    $total_bukmekers = BukmekerModel::getBukmekersCount();
+                    $total_subscriptions = $bukmeker->getBukmekersCountOfSubscriptions();
+                    $total_bukmekers = $bukmeker->getBukmekersCount();
                     $i = 0;
-                    foreach(BukmekerModel::getBuckmekersOrderByUserCount() as $post){
+                    foreach($bukmeker->getBuckmekersOrderByUserCount() as $post){
                         $i++;
                         $html .= "<div class='p{$i} column_item' style='height: calc((100px*{$post['bukmekers_users_count']})/{$total_subscriptions}); width: calc(60%/{$total_bukmekers})'></div>";
                     }
@@ -69,7 +69,7 @@
                     $html = '';
                     $i = 0;
 
-                    foreach(BukmekerModel::getBuckmekersOrderByUserCount() as $post){
+                    foreach($bukmeker->getBuckmekersOrderByUserCount() as $post){
                         $i++;
                         $percents = ($post['bukmekers_users_count']>0)?round(100*$post['bukmekers_users_count']/$total_subscriptions, 1):0;
                         $class = ($i > 9)?"hide_item":'';

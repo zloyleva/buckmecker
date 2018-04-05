@@ -10,11 +10,6 @@ abstract class PostMeta{
             add_action( 'add_meta_boxes', array( $this, $meta_field['name'].'_custom_box' ));
         }
 
-//        add_action( 'add_meta_boxes', array( $this, $this->meta_fields[0]['name'].'_custom_box' ));
-//        add_action( 'add_meta_boxes', array( $this, $this->meta_fields[1]['name'].'_custom_box' ));
-//        add_action( 'add_meta_boxes', array( $this, $this->meta_fields[2]['name'].'_custom_box' ));
-//        add_action( 'add_meta_boxes', array( $this, $this->meta_fields[3]['name'].'_custom_box' ));
-
         add_action( 'save_post', array( $this, 'save_post_data' ));
         add_action( 'save_post', array( $this, 'set_open_comment'), 10, 3 );
     }

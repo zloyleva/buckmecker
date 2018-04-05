@@ -4,6 +4,9 @@
     $championship =  new ChampionshipModel();
     $current_page = $_GET['page']??1;
     $posts = $championship->getPostsWithMetaForPage($current_page);
+
+    $bukmeker = new BukmekerModel();
+    $bukmeker->getBuckmekersFromDB();
 ?>
 
 <!--    <pre>-->
@@ -18,7 +21,8 @@
     <div class="container content">
         <div class="row">
 
-            <?php get_sidebar( 'left' ); ?>
+<!--            --><?php //get_sidebar( 'left' ); ?>
+            <?php  include_once(locate_template('sidebar-left.php')); ?>
 
             <!--    Center: Content list Start   -->
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 center_content_list">
@@ -85,8 +89,8 @@
 
             </div>
             <!--    Center: Content list End   -->
+            <?php  include_once(locate_template('sidebar-right.php')); ?>
 
-            <?php get_sidebar( 'right' ); ?>
 
         </div>
     </div>

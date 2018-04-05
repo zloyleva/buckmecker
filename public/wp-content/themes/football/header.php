@@ -57,4 +57,3 @@
     </div>
 </div>
 <!-- header section end -->
-<?php BukmekerModel::getBuckmekersFromDB(); ?>

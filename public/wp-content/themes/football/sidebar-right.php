@@ -15,7 +15,7 @@
 
                 $html = '';
                 $item_counts = 0;
-                foreach(BukmekerModel::getBuckmekersOrderByRate() as $post){
+                foreach($bukmeker->getBuckmekersOrderByRate() as $post){
                     $item_counts++;
                     $add_class = '';
                     if($item_counts>4){
@@ -92,7 +92,7 @@
                         <option selected disabled>Выберите букмекера</option>
                         <?php
                         $html = '';
-                        foreach(BukmekerModel::getBuckmekers() as $post){
+                        foreach($bukmeker->getBuckmekers() as $post){
                             $html .= '<option data-value="'.$post['ID'].'">'.$post['post_title'].'</option>';
                         }
                         echo $html;
