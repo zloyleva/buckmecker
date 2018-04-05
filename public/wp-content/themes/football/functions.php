@@ -114,11 +114,13 @@ function set_rate_your_bk(){
     }
 
     $bukmekers_id = sanitize_text_field($_POST['rate_bk_id']);
-    $current_bukmekers_rate = get_post_meta($bukmekers_id, 'bukmekers_rate');
+
+    $bukmeker = new BukmekerModel();
+    $data = $bukmeker->getCurrentPostWithMetaForPage($bukmekers_id);
 
     echo json_encode([
         'data' => $_POST,
-        'rate' => $current_bukmekers_rate,
+        'data_' => $data,
         'status' => 'going'
     ]);
     die();

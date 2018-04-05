@@ -45,6 +45,22 @@ class BukmekerModel{
         $this->countTheTotalNumberOfSubscriptions(self::$bukmekers);
     }
 
+    function getCurrentPostWithMetaForPage($page_id)
+    {
+        global $wpdb;
+
+        $selected_fields = "wp_posts.ID, wp_posts.post_date, wp_posts.post_content, wp_posts.post_title, wp_posts.post_excerpt, wp_posts.post_name, wp_posts.guid, wp_posts.post_type";
+        $selected_fields .= $this->sql_select_list;
+
+        $sql = "SELECT {$selected_fields} FROM {$wpdb->posts}
+                {$this->sql_join_list}
+                where ID in ({$page_id})
+                and post_status = 'publish'
+                ;";
+
+        return  $wpdb->get_results($sql, ARRAY_A);
+    }
+
     private function countTheTotalNumberOfSubscriptions($array){
         self::$bukmekers_count =  count($array);
 
